@@ -1,6 +1,6 @@
 ### demo hadoop streaming with python
 
-### test in python 
+### test in local 
 
 	cat test.sh | bash
 
