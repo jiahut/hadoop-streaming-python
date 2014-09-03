@@ -1,0 +1,6 @@
+#! /bin/bash
+
+#
+# usage: cat some.txt | ./local.run
+#
+./mapper.py | sort -k1,1 | ./reducer.py   </dev/stdin
