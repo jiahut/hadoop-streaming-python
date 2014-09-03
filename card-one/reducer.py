@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from itertools import groupby, chain
+from itertools import groupby
 from operator import itemgetter
 from collections import Counter
 import sys
@@ -14,7 +14,7 @@ def main(separator = ','):
 	for uid_with_last4, group in groupby(data, itemgetter(0)):
 		try:
 			cards = ( "_".join([card,area]) for uid_with_last4, card, area in group)
-			top2 = Counter(chain(cards)).most_common(2)
+			top2 = Counter(cards).most_common(2)
 			if len(top2) > 1:
 				bigest,bigger = top2
 				if not bigest[1] == bigger[1]:
