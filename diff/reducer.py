@@ -5,7 +5,7 @@ from operator import itemgetter
 from collections import Counter
 import sys
 
-def read_mapper_output_from(file, separator = ','):
+def read_mapper_output_from(file, separator = '\t'):
 	for line in file:
 		yield line.rstrip().split(separator, 2)	
 
@@ -15,8 +15,8 @@ def main():
 		marks = [ mark for uid_card,mark in group ]
 		if len(marks) == 1:
 			mark = marks[0]	
-			uid, card = uid_card.split("_")
-			if mark is 'A':
+		 	uid, card = uid_card.split(":")
+		 	if mark is 'A':
 				print("%s,%s" %(uid, card))
 
 if __name__ == '__main__':

@@ -7,7 +7,7 @@ def read_from(file, seg = ","):
 
 def main():
 	for mark,uid,card,_ in read_from(sys.stdin):
-		print("%s,%s" % ("_".join([uid,card]), mark))
+		print("%s\t%s" % (":".join([uid,card]), mark))
 
 if __name__ == '__main__':
 	main()
